@@ -14,12 +14,18 @@
     <color name="colorGreenStatus">#005454</color>
     <color name="titleColor">#4F4F4F</color>
     <!-- Project Colors -->
-    <color name="colorGrey">#EEECED</color>
     <color name="colorGreyText">#52575A</color>
+    <color name="colorGrey">#F5F5F5</color>
+    <color name="colorGreyButton">#EEECED</color>
     <color name="colorActionBar">#750130</color>
     <color name="colorStatusBar">#610029</color>
     <color name="colorYellow">#FDC055</color>
     <color name="colorPurple">#FF6266</color>
+    <color name="colorTabLayout">#2D2D2D</color>
+    <color name="colorMixedText">#545454</color>
+    <color name="colorMixedGradientStart">#F0975B</color>
+    <color name="colorMixedGradientEnd">#F57C73</color>
+
 
 
 

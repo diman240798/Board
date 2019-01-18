@@ -24,16 +24,17 @@ class TestMenuActivity : AppCompatActivity() {
         setupViewPager(viewPager)
 
         val tabLayout = findViewById(R.id.tablayout) as TabLayout
+        tabLayout.setTabTextColors(resources.getColor(R.color.colorGreyText), resources.getColor(R.color.colorPrimary))
         tabLayout.setupWithViewPager(viewPager)
+
 
 
     }
 
     private fun setupViewPager(viewPager: ViewPager) {
         val adapter = ViewPagerAdapter(supportFragmentManager)
-        adapter.addFragment(PeopleFragment(), "People")
-        adapter.addFragment(PeopleFragment(), "Group")
-        adapter.addFragment(PeopleFragment(), "Calls")
+        adapter.addFragment(MixedFragment(), "Mixed")
+        adapter.addFragment(TopicFragment(), "TOPIC")
         viewPager.adapter = adapter
     }
 
