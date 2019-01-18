@@ -11,7 +11,9 @@
             android:theme="@style/AppTheme" tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".TestActivity">
         </activity>
-        <activity android:name=".TestMenuActivity">
+        <activity
+                android:theme="@style/AppThemeNoActionBar"
+                android:name=".TestMenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
