@@ -1,6 +1,6 @@
 package cpp.quiz.sfedu.cppquiz.testMenu.mixed
 
-import java.util.ArrayList;
+import java.util.*
 
 class MixedTestsUtil {
     companion object {

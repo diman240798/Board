@@ -1,9 +1,8 @@
-package cpp.quiz.sfedu.cppquiz.testMenu.mixed
+package cpp.quiz.sfedu.cppquiz.testMenu.topic
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import cpp.quiz.sfedu.cppquiz.testMenu.listener.TestClickListener
-import kotlinx.android.synthetic.main.topic_item.*
 
 class TopicTestViewHolder(itemView: View, testClickListener: TestClickListener) : RecyclerView.ViewHolder(itemView) {
 
@@ -13,7 +12,7 @@ class TopicTestViewHolder(itemView: View, testClickListener: TestClickListener) 
         }
     }
 
-    fun bindItems(mixedTest: TopicQuestion) {
+    fun bindItems(mixedTest: TopicTest) {
         itemView.apply {
 
 

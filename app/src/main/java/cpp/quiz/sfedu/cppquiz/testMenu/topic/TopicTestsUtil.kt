@@ -1,4 +1,4 @@
-package cpp.quiz.sfedu.cppquiz.testMenu.mixed
+package cpp.quiz.sfedu.cppquiz.testMenu.topic
 
 import cpp.quiz.sfedu.cppquiz.testMenu.topic.TopicTest
 import java.util.ArrayList;

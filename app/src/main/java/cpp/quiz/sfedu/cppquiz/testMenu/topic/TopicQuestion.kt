@@ -1,4 +1,4 @@
-package cpp.quiz.sfedu.cppquiz.testMenu.mixed
+package cpp.quiz.sfedu.cppquiz.testMenu.topic
 
 data class TopicQuestion(
     val id: Int,

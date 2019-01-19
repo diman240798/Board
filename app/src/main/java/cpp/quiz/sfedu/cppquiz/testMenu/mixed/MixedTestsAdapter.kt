@@ -9,7 +9,7 @@ import cpp.quiz.sfedu.cppquiz.R
 import cpp.quiz.sfedu.cppquiz.testMenu.listener.TestClickListener
 import cpp.quiz.sfedu.cppquiz.test.activity.TestActivity
 
-class MixedTestsAdapter(val tests: List<TopicQuestion>) : RecyclerView.Adapter<MixedTestViewHolder>(),
+class MixedTestsAdapter(val tests: List<MixedTest>) : RecyclerView.Adapter<MixedTestViewHolder>(),
     TestClickListener {
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): MixedTestViewHolder =
         MixedTestViewHolder(
