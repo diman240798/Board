@@ -16,6 +16,7 @@
     <!-- Project Colors -->
     <color name="colorGreyText">#52575A</color>
     <color name="colorGrey">#F5F5F5</color>
+    <color name="colorGreyItem">#F0F0F0</color>
     <color name="colorGreyButton">#EEECED</color>
     <color name="colorActionBar">#750130</color>
     <color name="colorStatusBar">#610029</color>
