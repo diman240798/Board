@@ -24,8 +24,7 @@ class MixedFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mixed_recycler_view.layoutManager = GridLayoutManager(context, 3)
-        mixed_recycler_view.adapter =
+        mixed_recycler_view.adapter=
                 MixedTestsAdapter(MixedTestsUtil.getTests())
     }
 
