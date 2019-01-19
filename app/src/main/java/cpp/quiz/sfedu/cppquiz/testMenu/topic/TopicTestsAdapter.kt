@@ -11,7 +11,8 @@ import cpp.quiz.sfedu.cppquiz.testMenu.listener.TestClickListener
 
 class TopicTestsAdapter(val tests: List<TopicTest>) : RecyclerView.Adapter<TopicTestViewHolder>(),
     TestClickListener {
-    override fun onCreateViewHolder(parent: ViewGroup, position: Int): TopicTestViewHolder=
+
+    override fun onCreateViewHolder(parent: ViewGroup, position: Int): TopicTestViewHolder =
         TopicTestViewHolder(
             LayoutInflater.from(parent.context).inflate(
                 R.layout.topic_item,
@@ -25,6 +26,7 @@ class TopicTestsAdapter(val tests: List<TopicTest>) : RecyclerView.Adapter<Topic
     override fun onBindViewHolder(holder: TopicTestViewHolder, position: Int) {
         holder.bindItems(tests[position])
     }
+
 
     override fun onTestClicked(context: Context, adapterPosition: Int) {
         val testActivityIntent = Intent(context, TestActivity::class.java)

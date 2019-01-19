@@ -12,7 +12,6 @@
         <activity android:name=".test.activity.TestActivity">
         </activity>
         <activity
-                android:theme="@style/AppThemeNoActionBar"
                 android:name=".testMenu.activity.TestMenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

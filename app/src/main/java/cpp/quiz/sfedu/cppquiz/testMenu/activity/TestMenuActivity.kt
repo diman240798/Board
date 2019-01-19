@@ -17,8 +17,6 @@ class TestMenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_menu)
 
-        val toolbar = findViewById(R.id.toolbar) as Toolbar
-        setSupportActionBar(toolbar)
         val actionBar = supportActionBar
         actionBar!!.setDisplayHomeAsUpEnabled(true)
 
@@ -27,9 +25,7 @@ class TestMenuActivity : AppCompatActivity() {
         setupViewPager(viewPager)
 
         val tabLayout = findViewById(R.id.tablayout) as TabLayout
-        tabLayout.setTabTextColors(resources.getColor(R.color.colorGreyText), resources.getColor(
-            R.color.colorPrimary
-        ))
+//        tabLayout.setTabTextColors(resources.getColor(R.color.colorGreyText), resources.getColor(R.color.colorPrimary))
         tabLayout.setupWithViewPager(viewPager)
 
 
