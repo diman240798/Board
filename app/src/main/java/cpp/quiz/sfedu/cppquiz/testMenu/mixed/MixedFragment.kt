@@ -1,10 +1,11 @@
-package cpp.quiz.sfedu.cppquiz
+package cpp.quiz.sfedu.cppquiz.testMenu.mixed
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import cpp.quiz.sfedu.cppquiz.R
 import kotlinx.android.synthetic.main.mixedfragment.*
 
 
@@ -21,7 +22,8 @@ class MixedFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mixed_recycler_view.adapter = MixedTestsAdapter(MixedTestsUtil.Companion.getTests())
+        mixed_recycler_view.adapter =
+                MixedTestsAdapter(MixedTestsUtil.getTests())
     }
 
 

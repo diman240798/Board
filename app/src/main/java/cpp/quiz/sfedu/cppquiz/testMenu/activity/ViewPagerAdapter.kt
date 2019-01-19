@@ -1,4 +1,4 @@
-package cpp.quiz.sfedu.cppquiz
+package cpp.quiz.sfedu.cppquiz.testMenu.activity
 
 
 import android.support.v4.app.Fragment

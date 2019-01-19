@@ -1,10 +1,13 @@
-package cpp.quiz.sfedu.cppquiz
+package cpp.quiz.sfedu.cppquiz.testMenu.activity
 
 import android.os.Bundle
 import android.support.design.widget.TabLayout
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
+import cpp.quiz.sfedu.cppquiz.testMenu.mixed.MixedFragment
+import cpp.quiz.sfedu.cppquiz.R
+import cpp.quiz.sfedu.cppquiz.testMenu.topic.TopicFragment
 
 
 class TestMenuActivity : AppCompatActivity() {
@@ -24,7 +27,9 @@ class TestMenuActivity : AppCompatActivity() {
         setupViewPager(viewPager)
 
         val tabLayout = findViewById(R.id.tablayout) as TabLayout
-        tabLayout.setTabTextColors(resources.getColor(R.color.colorGreyText), resources.getColor(R.color.colorPrimary))
+        tabLayout.setTabTextColors(resources.getColor(R.color.colorGreyText), resources.getColor(
+            R.color.colorPrimary
+        ))
         tabLayout.setupWithViewPager(viewPager)
 
 
