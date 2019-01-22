@@ -20,11 +20,14 @@
 
 
         <activity
+                android:exported="true"
                 android:parentActivityName=".main.activity.MainActivity"
                 android:name=".testMenu.activity.TestMenuActivity">
         </activity>
 
-        <activity android:name=".test.activity.TestActivity">
+        <activity
+                android:name=".test.activity.TestActivity"
+                  android:exported="true">
         </activity>
 
 

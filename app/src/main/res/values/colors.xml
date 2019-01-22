@@ -26,8 +26,8 @@
     <color name="colorMixedText">#545454</color>
     <color name="colorMixedGradientStart">#F0975B</color>
     <color name="colorMixedGradientEnd">#F57C73</color>
-
-
-
-
+    <color name="colorDevider">#444</color>
+    <color name="colorQuestionBackground">#F4F4F6</color>
+    <color name="colorAnswerRight">#54B192</color>
+    <color name="colorAnswerWrong">#E96E67</color>
 </resources>

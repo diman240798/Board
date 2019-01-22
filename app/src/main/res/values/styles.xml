@@ -16,4 +16,10 @@
         <item name="android:statusBarColor">@color/colorStatusBar</item>
     </style>
 
+    <style name="test_answer_style" parent="TextAppearance.MaterialComponents.Body1">
+
+        <item name="android:textSize">15sp</item>
+        <item name="android:padding">20dp</item>
+    </style>
+
 </resources>
