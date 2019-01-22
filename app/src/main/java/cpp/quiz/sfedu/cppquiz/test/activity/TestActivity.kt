@@ -41,10 +41,16 @@ class TestActivity : AppCompatActivity() {
 
         //handling navigation view item event
         val navigationView = findViewById(R.id.nav_view) as NavigationView
+        val add = navigationView.menu.add("1")
+        add.setActionView(R.layout.drawer_menu_item)
+
         //navigationView.setNavigationItemSelectedListener(this)
 
         //set viewpager adapter
         val pagerAdapter = ViewPagerAdapter(supportFragmentManager)
+        /*for (fragment in fragments) {
+            pagerAdapter.addFragment(fragment, "Title from test")
+        }*/
         viewPager.setAdapter(pagerAdapter)
 
         //change Tab selection when swipe ViewPager
