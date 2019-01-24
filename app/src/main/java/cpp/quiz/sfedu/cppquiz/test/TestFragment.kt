@@ -7,8 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import cpp.quiz.sfedu.cppquiz.R
+import cpp.quiz.sfedu.cppquiz.test.base.TestBaseClass
 
-class TestFragment : Fragment() {
+class TestFragment(
+    var test: TestBaseClass
+) : Fragment() {
+
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return LayoutInflater.from(container!!.context).inflate(R.layout.test_layout, container, false)
     }

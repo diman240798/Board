@@ -21,26 +21,14 @@ class TestActivity : AppCompatActivity() {
         setContentView(R.layout.activity_test)
 
 
+
+        fragments.add(TestFragment(TestBaseClass()))
+        fragments.add(TestFragment(TestBaseClass()))
+        fragments.add(TestFragment(TestBaseClass()))
+
         configDrawer()
         configViewPager()
 
-
-        /*supportFragmentManager
-            .beginTransaction()
-            .add(R.id.test_fragment, fragments[currentFragmentNumber])
-            .commit()*/
-    }
-
-    private fun configViewPager() {
-        //set viewpager adapter
-        val pagerAdapter = ViewPagerAdapter(supportFragmentManager)
-        /*for (fragment in fragments) {
-            pagerAdapter.addFragment(fragment, "Title from test")
-        }*/
-        viewPager.setAdapter(pagerAdapter)
-
-        //change Tab selection when swipe ViewPager
-        //        viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
     }
 
     private fun configDrawer() {
@@ -59,13 +47,23 @@ class TestActivity : AppCompatActivity() {
         //navigationView.setNavigationItemSelectedListener(this)
     }
 
+    private fun configViewPager() {
+        //set viewpager adapter
+        val pagerAdapter = ViewPagerAdapter(supportFragmentManager)
+        for (fragment in fragments) {
+            pagerAdapter.addFragment(fragment, "Title from test")
+        }
+        viewPager.setAdapter(pagerAdapter)
+
+        //change Tab selection when swipe ViewPager
+        //        viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
+    }
+
     fun onNextPressed(view: View) {
         if (currentFragmentNumber + 1 > fragments.size)
             return
         currentFragmentNumber += 1
-        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.test_fragment, fragments[currentFragmentNumber])
-            .commit()
+//        viewPager.swipeEnabled = true
+        viewPager.setCurrentItem(currentFragmentNumber, true)
     }
 }

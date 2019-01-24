@@ -8,7 +8,7 @@
 
     <!--question-->
     <TextView
-            tools:text="Question Question Question "
+            tools:text="Question Question Question"
             android:padding="16dp"
             android:layout_margin="32dp"
             style="@style/TextAppearance.MaterialComponents.Headline6"

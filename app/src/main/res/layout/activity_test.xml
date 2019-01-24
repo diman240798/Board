@@ -6,6 +6,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".test.activity.TestActivity">
+
+
     <LinearLayout android:orientation="vertical"
                   android:layout_width="match_parent"
                   android:layout_height="match_parent">
@@ -24,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-            <android.support.v4.view.ViewPager
+            <cpp.quiz.sfedu.cppquiz.ui.CustomViewPager
                     android:id="@+id/viewPager"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
@@ -39,16 +41,11 @@
             <!--app:menu="@menu/drawer_menu"-->
 
         </android.support.v4.widget.DrawerLayout>
-
-
-        <FrameLayout
-                android:id="@+id/test_fragment"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
     </LinearLayout>
 
+
     <ImageView
+            android:layout_margin="16dp"
             android:background="@drawable/next_button"
             android:layout_gravity="bottom|end"
             android:onClick="onNextPressed"
