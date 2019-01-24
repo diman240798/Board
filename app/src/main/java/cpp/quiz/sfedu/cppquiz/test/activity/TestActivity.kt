@@ -1,17 +1,14 @@
 package cpp.quiz.sfedu.cppquiz.test.activity
 
 import android.os.Bundle
-import android.support.design.widget.NavigationView
-import android.support.v4.view.ViewPager
-import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
 import android.view.View
 import cpp.quiz.sfedu.cppquiz.R
 import cpp.quiz.sfedu.cppquiz.test.TestFragment
 import cpp.quiz.sfedu.cppquiz.test.base.TestBaseClass
 import cpp.quiz.sfedu.cppquiz.testMenu.activity.ViewPagerAdapter
+import kotlinx.android.synthetic.main.activity_test.*
 
 
 class TestActivity : AppCompatActivity() {
@@ -24,28 +21,17 @@ class TestActivity : AppCompatActivity() {
         setContentView(R.layout.activity_test)
 
 
-        var viewPager = findViewById(R.id.view_pager) as ViewPager
-        val toolbar = findViewById(R.id.toolbar) as Toolbar
-        var drawer = findViewById(R.id.drawerLayout) as DrawerLayout
-
-//        setSupportActionBar(toolbar)
-
-        //create default navigation drawer toggle
-        val toggle = ActionBarDrawerToggle(
-            this, drawer, toolbar,
-            R.string.navigation_drawer_open, R.string.navigation_drawer_close
-        )
-        drawer.addDrawerListener(toggle)
-        toggle.syncState()
+        configDrawer()
+        configViewPager()
 
 
-        //handling navigation view item event
-        val navigationView = findViewById(R.id.nav_view) as NavigationView
-        val add = navigationView.menu.add("1")
-        add.setActionView(R.layout.drawer_menu_item)
+        /*supportFragmentManager
+            .beginTransaction()
+            .add(R.id.test_fragment, fragments[currentFragmentNumber])
+            .commit()*/
+    }
 
-        //navigationView.setNavigationItemSelectedListener(this)
-
+    private fun configViewPager() {
         //set viewpager adapter
         val pagerAdapter = ViewPagerAdapter(supportFragmentManager)
         /*for (fragment in fragments) {
@@ -54,13 +40,23 @@ class TestActivity : AppCompatActivity() {
         viewPager.setAdapter(pagerAdapter)
 
         //change Tab selection when swipe ViewPager
-//        viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
+        //        viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
+    }
 
+    private fun configDrawer() {
+        //create default navigation drawer toggle
+        val toggle = ActionBarDrawerToggle(
+            this, drawerLayout, toolbar,
+            R.string.navigation_drawer_open, R.string.navigation_drawer_close
+        )
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
 
-        /*supportFragmentManager
-            .beginTransaction()
-            .add(R.id.test_fragment, fragments[currentFragmentNumber])
-            .commit()*/
+        //handling navigation view item event
+        val add = nav_view.menu.add("1")
+        add.setActionView(R.layout.drawer_menu_item)
+
+        //navigationView.setNavigationItemSelectedListener(this)
     }
 
     fun onNextPressed(view: View) {
